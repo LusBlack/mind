@@ -1,0 +1,122 @@
+//mod player;
+// use crate::archive::arch::arch_file as arc;
+// mod archive;
+
+// extern crate rand;
+
+//use std::io; //to receive input from user
+// use rand :: Rng;
+
+//use std::collections::btree_map::Values;
+use std::env::{args, Args};
+
+
+fn main() { //entry point to program
+//     let primes =[2, 3, 5,7,11];
+//     let doubles= [2.0, 4.0, 6.0, 8.0];
+//     println!("{:?}", primes);
+//     println!("{:?}", doubles);
+//     let ships = ["ships"; 10];
+//     println!("{:?}", ships);
+//     const DEFAULT: i32 = 3;
+//     let mut numbers = [DEFAULT; 15];
+//    // println!("{:?}", numbers);
+
+// numbers[0] = 1;
+//     println!("{:?}", numbers[0]);
+//     numbers[3] = 8;
+    
+//     println!("{:?}",numbers);
+
+    // for number in numbers.iter() {
+    //     println!("{}", number);
+    // }
+
+    
+    let mut args: Args = args();
+     let first = args.nth(1).unwrap();
+
+        // let _mut nauts: Vec<i32> = Vec::new();
+         let  mut nauts: Vec<i32> = vec![2,3,5];
+        println!("{:?}", nauts); 
+        nauts.push(7);
+        println!("{:?}", nauts);
+        nauts.remove(0);
+        println!("{:?}", nauts);
+
+        let mut numbers = vec![2;20];
+        //semicolon in vec indicates that value will 
+        //be printed as many times as integer on the right
+
+        println!("{:?}", numbers);
+
+        const DEFAULT: bool = true;
+        let values = vec![DEFAULT;8];
+        println!("{:?}",values);
+
+        numbers[5] = 8;
+        println!("{:?}", numbers);
+
+    
+    // let mut rng = rand::thread_rng();
+    // let a: i32 =rng.gen();
+    // println!("{}", a);
+
+
+
+    // let mut x = vec!["bazinga"];
+    // let y =& x [0];
+    // x.push("gru");
+    // println!("Guess the number!");
+// let secret_number = rand :: thread_rng().gen_range(1, hig101);
+// println!("The secret number is: {}", secret_number);
+//     println!("Please enter your hunch.");
+    
+// let mut hunch = String :: new ();
+
+// //
+//     io :: stdin().read_line(& mut hunch)
+//  .ok()
+   
+//     .expect("Failed to read line");
+
+//     println!("Your hunch was: {}", hunch);
+//     match hunch.cmp(&secret_number) {
+//         ordering ::Less => println!("Very small!"),
+//         ordering::Greater => println!("Very big"),
+//         ordering :: Equal => println!("You won!"),
+// }
+
+}
+//     arc("docs");
+//  player::play_movie("snatch.mp4");
+//  player::play_audio("rhcp.mp3"); 
+//  let mut rng = rand::thread_rng();
+//  let i: i32 = rng.gen();
+//  println!("{}", i);
+
+//  clean::perform_clean();
+//  clean::files::clean_files();
+// }
+
+// mod clean {
+//     pub fn perform_clean() {
+//         println!("Cleaning hdd");
+//     }
+//     pub mod files {
+//         pub fn clean_files() {
+//             println!("Removing unused files");
+//         }
+//     }
+
+
+// “+=” (Add Assignment): A combination of the ‘+’ and ‘=’ operators. 
+// This operator first adds the variable on the left’s current value to the 
+// right and then assigns result to the variable on the left
+
+
+// #[allow(unused_variables)]
+// #[allow(unused_assignments)]
+// #[allow(dead_code)]
+// #[allow(non_snake_case)]
+// #[allow(unused_mut)]
