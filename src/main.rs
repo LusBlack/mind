@@ -1,16 +1,18 @@
+extern crate rand;
  use std::io;
  use rand::Rng;
+ use std ::cmp::Ordering;
+ 
 fn main() {
     println!("Guess the number!");
-    
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number = rand::thread_rng().gen_range(1, 101);
+    println!("The secret number is : {}", secret_number);
     
     println!("Please input your guess.");
 
     let mut guess = String ::new();
     //"String :: new" serves as a container
-    //"String ::new() is a function that returns a new instance of a string"
-    //"::" indicates that new is an associated function of the String type
+    
 
     io::stdin()
     //listen for user input
@@ -19,10 +21,13 @@ fn main() {
         .read_line(&mut guess)
         //this calls the read_line method on the standard input handle 
         //to get input from the user.
-        //the full job of read_line is to take whatever the user types into stdin
-        //(without overwriting its contents), so we pass the string as an argument.
-        //the string needs to be mutable so the method can change the string's content
         .expect("Failed to read line");
 
     println!("You guessed: {guess}");
+
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
 }
