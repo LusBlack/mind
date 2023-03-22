@@ -20,7 +20,7 @@ fn main() {
     
 
    io::stdin()
-    //listen for user input
+    
     //the stdin function allows us to handle user input.
     //we get it from the io module
        .read_line(&mut guess)
@@ -28,6 +28,7 @@ fn main() {
         //to get input from the user.
         .expect("Failed to read line");
     let guess: u32 = match guess.trim().parse() {
+        //converting to int
         Ok(num) => num,
         Err(_) => continue,
     };
